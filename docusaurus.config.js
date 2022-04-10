@@ -14,7 +14,7 @@ const config = {
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/dag-logo.png',
   organizationName: 'DulliAG', // Usually your GitHub org/user name.
-  projectName: 'documentation', // Usually your repo name.
+  projectName: 'Documentation', // Usually your repo name.
 
   presets: [
     [
@@ -24,12 +24,12 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/dulliag/documentation/',
+          editUrl: 'https://github.com/DulliAG/Documentation/blob/main/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
-          editUrl: 'https://github.com/dulliag/documentation/',
+          editUrl: 'https://github.com/DulliAG/Documentation/blob/main/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
