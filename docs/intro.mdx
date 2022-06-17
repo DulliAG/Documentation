@@ -20,35 +20,48 @@ export const DocumentSection = () => {
       <div className={style.grid}>
         {[
           {
+            show: true,
             label: 'LoggerJS',
             description: null,
-            targetLocation: '../logger-js/logger-js-client',
+            targetLocation: 'logger-js/logger-js-client',
           },
           {
+            show: false,
             label: 'LoggerJS-Web',
             description: null,
-            targetLocation: '../logger-js/logger-js-web',
+            targetLocation: 'logger-js/logger-js-web',
           },
           {
+            show: true,
             label: '@dulliag/components',
             description: null,
-            targetLocation: '../dulliag-components',
+            targetLocation: 'dulliag-components',
           },
           {
+            show: true,
             label: '@dulliag/discord-helper',
             description: null,
-            targetLocation: '../dulliag-components',
+            targetLocation: 'dulliag-components',
           },
           {
+            show: true,
             label: 'DulliBot',
             description: null,
-            targetLocation: '../dullibot',
+            targetLocation: 'dullibot',
           },
-        ].map((link, i) => (
-          <div key={i}>
-            <DocumentLink {...link} key={link.targetLocation} />
-          </div>
-        ))}
+          {
+            show: false,
+            label: 'A3RLRPG-Infoapp',
+            description: null,
+            targetLocation: 'dullibot',
+          },
+        ]
+          .filter((link) => link.show)
+          .map((link, i) => (
+            <div key={i}>
+              <DocumentLink {...link} key={link.targetLocation} />
+            </div>
+          ))}
       </div>
     </div>
   );
